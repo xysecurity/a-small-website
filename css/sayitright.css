@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.body{
+	color:#595959;
+	background:#FFFFFF;
+	font-family:Roboto;
+}
+.main{
+	margin:0 0 10% 0;
+}
+
+.h1{
+	font-family:Roboto;
+	line-height:200%;
+	font-size:40px;
+}
+.nav{
+	font-weight:bold;
+	font-family:Roboto;
+	width: 800px; 
+	float:left;
+	positon:relative;
+	top:50px;
+	
+	/*background-color: #90C7E3;*/
+}
+
+.middle{	
+	background-color:#FFD700;
+	height:200px;
+	margin-bottom:30px;
+}
+
+.footer{
+	font-size:0.7em;
+	font-family:Roboto;
+	text-align:center;
+}
+.registertext{
+	padding:0 20%;
+}
+#wrapper{
+	padding:0 20%;
+}
+.button{
+}
+.button:hover{
+	background-color:#FFC300;
+
+}
+li{
+	float:left;
+	padding:5px;
+}
+ul{
+	list-style-type:none;/*去掉小黑点*/
+	margin:0;
+	
+	overflow:visible;/*溢出元素框时修剪内容*/
+}
+li a{
+	display:blcok;/*变成块状可点击区域*/
+	
+	/*background-color:#90C7E3;	*/
+	color:#595959;;
+    
+	text-decoration:none;/*去掉链接的横线*/
+}
+li a:hover{
+	color:#FFC300;
+}
+li a.active{
+	color:#FFC300;
+}
+
+form{
+	background:#D7D7D7;
+}
+	
+	
+
+		
+	
+		
