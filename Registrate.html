@@ -1,25 +1,133 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<link rel="stylesheet" type="text/css" href="file:///E|/desktop/OneDrive - AIOS/WEB数据管理/Program/WANG_LEANEVENTO/css/sayitright.css" />
+<link rel="stylesheet" type="text/css" href="css/leanevent.css" />
+	 <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+	
+	<script src="js/jquery.form.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>	
+	
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Home</title>
+	<script>
+		     // wait for the DOM to be loaded 
+        $(document).ready(function() { 
+            // bind 'myForm' and provide a simple callback function 
+            $('#individualpage').ajaxForm(function(data) { 
+				
+				
+				var b=data;
+				if(b==1){
+					alert("fail,you should input all required information");
+					
+				}
+				else{
+					if(b==2){
+					alert("sorry, your email have been registed already")
+				}else{
+					location.reload();
+					alert("Thank you for your registration! Your name is"+b); }
+
+				}
+
+					
+                
+            }); 
+			  $('#fundacionlpage').ajaxForm(function(data) { 
+				
+				
+				var b=data;
+				if(b==1){
+					alert("fail,you should input all required information");
+					
+				}
+				else{
+					if(b==2){
+					alert("sorry, your email have been registed already")
+				}else{
+					location.reload();
+					alert("Thank you for your registration! Your name is"+b); }
+
+				}
+
+					
+                
+            }); 
+			  $('#agentlpage').ajaxForm(function(data) { 
+				
+				
+				var b=data;
+				if(b==1){
+					alert("fail,you should input all required information");
+					
+				}
+				else{
+					if(b==2){
+					alert("sorry, your email have been registed already")
+				}else{
+					location.reload();
+					alert("Thank you for your registration! Your name is"+b); }
+
+				}
+
+					
+                
+            }); 
+        }); 
+		
+		
+	function showLayer(id,width, height){
+		
+		var a=id;
+        var winWidth=document.documentElement.clientWidth;
+        var winHeight=document.documentElement.clientHeight;
+        var offsetTop=document.documentElement.scrollTop;
+		
+        var left=(winWidth-width)/2;
+		
+        var top=(winHeight-height)/2+offsetTop;
+        a.style.top=top+"px";
+        a.style.left=left+"px";
+		
+        a.style.display="block";
+		
+		cover.style.display="block";
+		
+	}
+		
+		
+		function hideLayer(id) {
+			
+    var obj = id;
+    obj.style.display = "none";
+			cover.style.display="none";
+}
+		
+		</script>
 </head>
 
 <body>
+	
+
+
+	<div id="cover">
+	
+	</div>
 <div class="body">
 <div id="header" style="height:200px;">
 	<div id="nav" class="nav">
 		<div id="logo"><img src="img/imagenes/logo-blanco.png" alt="The logo" style="height:100px;float:left;"></div>
   <div style="position:relative;top:50px;left:140px">
 	<ul>
-    <li><a href="">Inicil</a></li>
-    <li><a class="active" href="">Quienes Somos</a></li>
+    <li><a href="Home.html">Inicil</a></li>
+    <li><a href="Aboutus.html">Quienes Somos</a></li>
     <li><a href="">Blog</a></li>
-    <li><a href="">Registrate</a></li>
-    <li><a href="">Contacto</a></li>
-    <li><a href="">Iniciar Sesion</a></li>
-    <li><a href="">Comprar Boletos</a></li>
+    <li><a class="active" href="Registrate.html">Registrate</a></li>
+    <li><a href="Contact.html">Contacto</a></li>
+    <li><a href="Login.html">Iniciar Sesion</a></li>
+    <li><a href="buyfromus.html">Comprar Boletos</a></li>
   </ul>
 	</div>
 
@@ -35,28 +143,293 @@
 	
 </div>
 	
-	<div id=wrapper>
-		
-		<div align=center>
-			<form style="height:120px;">
-				
-				<div style="width:200px;position:relative;right:200px;top:20px"><p>Inciar Sesion</p>
-					</div>
-				<div style="width:200px;position:relative;right:200px;top:30px"><button>Como individual</button>
-				</div>
-				
-				<div style="width:200px;position:relative;top:10px;"><button>Como Negocio o Fundacion</button></div>
-				
-			<div style="width:200px;position:relative;left:180px;bottom:12px"><button>Como agente LEAN</button>
-				</div>
-				
+	<div id="wrapper">
+		<form id="indi" class="form" style="height:120px;">
+		<div class="container">
 			
-			</form>
+				<div class="row">
+				<div class="col-md-12"><p>Inciar Sesion</p>
+					</div>
+					</div>
+				<div class="row">
+				<div class="col-md-3"><button type="button" class="buttonregister" onClick="showLayer(individualpage,600, 600)">Como individual</button>
+				</div>
+				
+				<div class="col-md-5"><button type="button" class="buttonregister" onClick="showLayer(fundacionlpage,600, 650)">Como Negocio o Fundacion</button></div>
+				
+			<div  class="col-md-4"><button type="button" class="buttonregister" onClick="showLayer(agentlpage,600,600)">Como agente LEAN</button>
+				</div>
+				</div>
+			
+			
 			
 			</div>
+			</form>
+		
+		<form method="post" action="php/registerIndi.php" id="individualpage">
+				
+			<div class="container">
+			
+				
+				
+				<div class="row">
+				<div class="col-md-12" style="width=100px;"><lable>Registro Individual</lable>
+					</div>
+					</div>
+				<div class="row">
+				<div class="col-md-6"><lable>Correo</lable>
+					<input type="text" name="correo"  class="form-control" placeholder="Correo" /></div>
+				<div class="col-md-6">
+					<lable>Contrasena</lable>
+				<input name="contrasena" type="text"  class="form-control" placeholder="Contrasena"/></div>
+					</div>
+				<div class="row">
+				<div class="col-md-6"><lable>Nombre</lable>
+					<input name="nombre" type="text"  class="form-control" placeholder="Nombre"/></div>
+				<div class="col-md-6">
+					<lable>Apellido</lable>
+				<input name="apellido" type="text" class="form-control"  placeholder="Apellido" /></div>
+					</div>
+				
+				
+				<div class="row">
+					<div class="col-md-12">
+				<lable for"name">Direccion</lable></div>
+				</div>
+				
+				<div class="row">
+				<div class="col-md-12">
+					<input name="direccion" type="text" class="form-control" placeholder="Direccion"></div></div>
+				
+				<div class="row">
+					<div class="col-md-12">
+				<lable for"name">Ciudad</lable></div>
+				</div>
+				
+				<div class="row">
+				<div class="col-md-12">
+					<input name="ciudad" type="text" class="form-control" placeholder="Ciudad"></div></div>
+				
+				<div class="row">
+					<div class="col-md-6">
+				<lable for"name">Estado</lable>
+						<select class="form-control" style="width:200px;" name="estado">
+							<option value="1" >1</option>
+							<option value="2" >2</option>
+						</select>
+					
+					
+					</div>
+				<div class="col-md-6">
+					<lable for"name">Codigo Postal</lable>
+					<input name="postal" type="text" class="form-control">
+					</div>
+					
+					
+					
+					
+					
+				</div>
+				
+				<div class="row">
+					<div class="col-md-12">
+						</div>
+					</div>
+				
+				
+				
+				<div class="row">
+				<div class="col-md-3"><button id="submit" type="submit" class="button1">Registrarse</button></div></div>
+				<hr />
+				
+				
+				<div class="row">
+				<div class="col-md-2 offset-10"><button type="button" class="button2" onClick="hideLayer(individualpage)" >Cerrar</button></div></div>
+		
+			</div>
+			</form>
+	
+	
+	
+	
+	<form id="fundacionlpage" method="post" action="php/registerFunda.php">
+				
+			<div class="container">
+			
+				<div class="row"></div>
+				
+				<div class="row">
+				<div class="col-md-12" style="width=100px;"><lable>Registro Negocio o Fundacion</lable>
+					</div>
+					</div>
+				<hr />
+				<div class="row">
+				<div class="col-md-6"><lable>Correo</lable>
+					<input type="text" name="correo"  class="form-control" placeholder="Correo" /></div>
+				<div class="col-md-6">
+					<lable>Contrasena</lable>
+				<input name="contrasena" type="text"  class="form-control" placeholder="Contrasena"/></div>
+					</div>
+				<div class="row">
+				<div class="col-md-6"><lable>Nombre</lable>
+					<input name="nombre" type="text"  class="form-control" placeholder="Nombre"/></div>
+				<div class="col-md-6">
+					<lable>Apellido</lable>
+				<input name="apellido" type="text" class="form-control"  placeholder="Apellido" /></div>
+					</div>
+				
+				
+				<div class="row">
+					<div class="col-md-12">
+				<lable for"name">Direccion</lable></div>
+				</div>
+				
+				<div class="row">
+				<div class="col-md-12">
+					<input name="direccion" type="text" class="form-control" placeholder="Direccion"></div></div>
+				
+				<div class="row">
+					<div class="col-md-12">
+				<lable for"name">Ciudad</lable></div>
+				</div>
+				
+				<div class="row">
+				<div class="col-md-12">
+					<input name="ciudad" type="text" class="form-control" placeholder="Ciudad"></div></div>
+				
+				<div class="row">
+					<div class="col-md-6">
+				<lable for"name">Estado</lable>
+						<select class="form-control" style="width:200px;" name="estado">
+							<option value="1" >1</option>
+							<option value="2" >2</option>
+						</select>
+					
+					
+					</div>
+				<div class="col-md-6">
+					<lable for"name">Codigo Postal</lable>
+					<input name="postal" type="text" class="form-control">
+					</div>
+					</div>
+		<div class="row">
+			<div class="col-md-4">
+				<input type="radio" name="Tipo" value="Tipo1" checked><a style="font-size:12px;">Tipo de negocio 1</a>
+				</div>
+			<div class="col-md-4">
+				<input type="radio" name="Tipo" value="Tipo2"><a style="font-size:12px;">Tipo de negocio 2</a>
+				</div>
+			
+			<div class="col-md-4">
+				<input type="radio" name="Tipo" value="Tipo3"><a style="font-size:12px;">Tipo de negocio 3</a>
+				</div>
+			
+			</div>
+				
+				<div class="row">
+					<div class="col-md-12">
+						</div>
+					</div>
+				
+				
+				
+				<div class="row">
+				<div class="col-md-3"><button class="button1">Registrarse</button></div></div>
+				<hr />
+				
+				
+				<div class="row">
+				<div class="col-md-2 offset-10"><button type="button" class="button2" onClick="hideLayer(fundacionlpage)" >Cerrar</button></div></div>
+		<div class="row"></div>
+		
+			</div>
+			</form>
+	
+	
+	<form id="agentlpage" method="post" action="php/registerAgen.php">
+				
+			<div class="container">
+			
+				<div class="row"></div>
+				
+				<div class="row">
+				<div class="col-md-12" style="width=100px;"><lable>Registro de Agente LEAN</lable>
+					</div>
+					</div>
+				<hr />
+				<div class="row">
+				<div class="col-md-6"><lable>Correo</lable>
+					<input type="text" name="correo"  class="form-control" placeholder="Correo" /></div>
+				<div class="col-md-6">
+					<lable>Contrasena</lable>
+				<input name="contrasena" type="text"  class="form-control" placeholder="Contrasena"/></div>
+					</div>
+				<div class="row">
+				<div class="col-md-6"><lable>Nombre</lable>
+					<input name="nombre" type="text"  class="form-control" placeholder="Nombre"/></div>
+				<div class="col-md-6">
+					<lable>Apellido</lable>
+				<input name="apellido" type="text" class="form-control"  placeholder="Apellido" /></div>
+					</div>
+				
+				
+				<div class="row">
+					<div class="col-md-12">
+				<lable for"name">Direccion</lable></div>
+				</div>
+				
+				<div class="row">
+				<div class="col-md-12">
+					<input name="direccion" type="text" class="form-control" placeholder="Direccion"></div></div>
+				
+				<div class="row">
+					<div class="col-md-12">
+				<lable for"name">Ciudad</lable></div>
+				</div>
+				
+				<div class="row">
+				<div class="col-md-12">
+					<input name="ciudad" type="text" class="form-control" placeholder="Ciudad"></div></div>
+				
+				<div class="row">
+					<div class="col-md-6">
+				<lable for"name">Estado</lable>
+						<select class="form-control" style="width:200px;" name="estado">
+							<option value="1" >1</option>
+							<option value="2" >2</option>
+						</select>
+					
+					
+					</div>
+				<div class="col-md-6">
+					<lable for"name">Codigo Postal</lable>
+					<input name="postal" type="text" class="form-control">
+					</div>
+					</div>
+		
+				
+				<div class="row">
+					<div class="col-md-12">
+						</div>
+					</div>
+				
+				
+				
+				<div class="row">
+				<div class="col-md-3"><button class="button1">Registrarse</button></div></div>
+				<hr />
+				
+				
+				<div class="row">
+				<div class="col-md-2 offset-10"><button type="button" class="button2" onClick="hideLayer(agentlpage)" >Cerrar</button></div></div>
+		<div class="row"></div>
+		
+			</div>
+			</form>
 		
 		
 	</div>
+
 <div id="footer" style="text-align:center;margin-top:30px;"><b>copyright@2019 All rights reserved|This web is made by Anakin</b></div>
 
 

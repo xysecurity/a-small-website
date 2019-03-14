@@ -12,8 +12,19 @@
 		width:100%
 	}
 	}
-}
 
+
+a:hover{
+	color:#E50C10;
+
+  
+}
+a {
+	display: block;
+	color:#595959;
+    
+	text-decoration:none;/*去掉链接的横线*/
+}
 .body{
 	color:#595959;
 	background:#FFFFFF;
@@ -42,7 +53,7 @@
 
 .middle{	
 	background-color:#FFD700;
-	height:200px;
+	padding:5%;
 	margin-bottom:30px;
 }
 
@@ -55,14 +66,13 @@
 	padding:0 20%;
 }
 #wrapper{
-	padding:0 20%;
+	
+	margin:10% 20%;
 }
-.button{
+#wrapper1{
+	margin:5% 10%;
 }
-.button:hover{
-	background-color:#FFC300;
 
-}
 li{
 	float:left;
 	padding:5px;
@@ -74,12 +84,12 @@ ul{
 	overflow:visible;/*溢出元素框时修剪内容*/
 }
 li a{
-	display:blcok;/*变成块状可点击区域*/
+	display:blcok;
 	
-	/*background-color:#90C7E3;	*/
-	color:#595959;;
+
+	color:#595959;
     
-	text-decoration:none;/*去掉链接的横线*/
+	text-decoration:none;
 }
 li a:hover{
 	color:#FFC300;
@@ -88,7 +98,7 @@ li a.active{
 	color:#FFC300;
 }
 
-form{
+.form{
 	background:#D7D7D7;
 }
 
@@ -168,9 +178,38 @@ padding:5px 10px 5px 10px;
 	padding:5px 10px 5px 10px; 
 	font-size:15px;
 	border-radius:40px;
-	
+		
 }
-
+.button4{
+	background:#000000;
+	padding:5px 10px 5px 10px; 
+	font-size:15px;
+	border-radius:0px 40px 40px 0; 
+}
+.button3{
+	background: white;
+	width:10px;
+	height:10px;
+	border: none;
+	border-radius:50%;
+}
+.button3:hover{
+	background: #FFD700;
+}
+.button5{
+	background:#9E9E9E;
+	padding:5px 10px 5px 10px; 
+	font-size:15px;
+}
+.button5:hover{
+	background: #FFD700;
+}
+.button6{
+	background:#208418;
+	padding:5px 10px 5px 10px; 
+	font-size:15px;
+	border-radius:40px;
+}
 #cover{
 	background:#000;
 	z-index:100;
@@ -207,4 +246,8 @@ padding:5px 10px 5px 10px;
 
 		
 	
-		
+		.Nombre {
+}
+
+
+

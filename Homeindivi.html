@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="css/sayitright.css" />
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.2/litera/bootstrap.min.css">
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>	
+	
+	
+	<script>
+	function showLayer(id,width, height){
+		
+		var a=id;
+        var winWidth=document.documentElement.clientWidth;
+        var winHeight=document.documentElement.clientHeight;
+        var offsetTop=document.documentElement.scrollTop;
+		
+        var left=(winWidth-width)/2;
+		
+        var top=(winHeight-height)/2+offsetTop;
+        a.style.top=top+"px";
+        a.style.left=left+"px";
+		
+        a.style.display="block";
+		
+		cover.style.display="block";
+		
+	}
+		
+		
+		function hideLayer(id) {
+			
+    var obj = id;
+    obj.style.display = "none";
+			cover.style.display="none";
+}
+		
+		</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+<title>Home</title>
+	
+</head>
+
+<body>
+	<div id="cover">
+	
+	</div>
+<div class="body">
+<div id="header" style="height:200px;">
+	<div id="nav" class="nav">
+		<div id="logo"><img src="img/imagenes/logo-blanco.png" alt="The logo" style="height:100px;float:left;"></div>
+  <div style="position:relative;top:50px;left:500px">
+	<ul>
+    
+    <li><a class="active" href="">Inicio</a></li>
+    <li><a href="">Individual</a></li>
+    
+  </ul>
+	</div>
+
+
+</div>
+
+
+</div>
+
+<div class="main">
+	
+	<div id="list">
+		
+		<div class="row" style="background-color:#CBCBCB;font-size:18px;padding:10px 0;" align="center">
+			<div class="col-md-6" align="center">
+				<a>DETALLES DEL EVENTOS</a>
+				
+				</div>
+			<div class="col-md-2" align="center">
+				<a>LUGAR</a>
+				
+				</div>
+			
+			<div class="col-md-1" align="center">
+				<a>FECHA</a>
+				
+				</div>
+		
+			<div class="col-md-1" align="center">
+				<a>HORA</a>
+				
+				</div>
+	<div class="col-md-2" align="center">
+				<a>ASISTENCIA</a>
+				
+				</div>
+			
+			
+			</div>
+		
+		<div class="row" style="align-items: center;" align="center">
+			<div class="col-md-2">
+			<img src="img/imagenes/minibaner1.jpg" height="120px" width="100px">
+				</div>
+			<div class="col-md-4">
+			<a>Nombre del Evento y sus detalles</a>
+				</div>
+			<div class="col-md-2" style="font-size:14px">
+			<a>Direccion del lugar</a>
+				</div>
+			<div class="col-md-1" style="font-size:14px">
+			<a>14/01/2019</a>
+				</div>
+			<div class="col-md-1" style="font-size:14px">
+			<a id="test">8 AM</a>
+				</div>
+			<div class="col-md-2" style="font-size:14px">
+			<button class="button1"  onClick="showLayer(confirmpage,600,200)">Confirmar</button>
+				</div>
+			
+			</div>
+		<div class="row" style="align-items: center;" align="center">
+			<div class="col-md-2">
+			<img src="img/imagenes/minibaner2.jpg" height="120px" width="100px">
+				</div>
+			<div class="col-md-4">
+			<a>Nombre del Evento y sus detalles</a>
+				</div>
+			<div class="col-md-2" style="font-size:14px">
+			<a>Direccion del lugar</a>
+				</div>
+			<div class="col-md-1" style="font-size:14px">
+			<a>14/01/2019</a>
+				</div>
+			<div class="col-md-1" style="font-size:14px">
+			<a>8 AM</a>
+				</div>
+			<div class="col-md-2" style="font-size:14px">
+			<button class="button1">Confirmar</button>
+				</div>
+			
+			</div>
+		<div class="row" style="align-items: center;" align="center">
+			<div class="col-md-2">
+			<img src="img/imagenes/minibaner3.jpg" height="120px" width="100px">
+				</div>
+			<div class="col-md-4">
+			<a>Nombre del Evento y sus detalles</a>
+				</div>
+			<div class="col-md-2" style="font-size:14px">
+			<a>Direccion del lugar</a>
+				</div>
+			<div class="col-md-1" style="font-size:14px">
+			<a>14/01/2019</a>
+				</div>
+			<div class="col-md-1" style="font-size:14px">
+			<a>8 AM</a>
+				</div>
+			<div class="col-md-2" style="font-size:14px">
+			<button class="button1">Confirmar</button>
+				</div>
+			
+			</div>
+		
+		
+		</div>
+
+	<div id="confirmpage">
+		<div class="row" align="center">
+			<div class="col-md-12">
+			<lable>Bienvenido</lable>
+				</div>
+			</div>
+		<hr />
+		<div class="row" align="center">
+			<div class="col-md-12">
+			<lable>Gracias por ser un Voluntario en nuestros evento.</lable>
+				</div>
+			</div>
+		<hr />
+		<div class="row" align="center">
+			<div class="col-md-1 offset-10">
+			<button class="button2" onClick="hideLayer(confirmpage)">Close</button>
+				</div>
+			</div>
+		</div>
+	
+</div>
+	
+
+	
+	
+
+<div id="footer" style="text-align:center;"><b>copyright@2019 All rights reserved|This web is made by Anakin</b></div>
+
+</div>
+</body>
+</html>
