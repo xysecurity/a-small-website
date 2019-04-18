@@ -5,6 +5,10 @@
 	$shaname2=sha1($name2);
 	$name3=$_POST["nombre"];
 	$name4=$_POST["apellido"];
+		$pattern ='/^\w+@\w+\.\w+$/';
+    $pattern2='/^\w{7,16}$/';
+    preg_match($pattern, $_POST["correo"] ,$match1);
+	preg_match($pattern2, $_POST["contrasena"] ,$match2);
 	
 	
 	if(empty($name1)||empty($name2)||empty($name3)||empty($name4)||empty($_POST["direccion"])||empty($_POST["ciudad"])||empty($_POST["estado"])||empty($_POST["postal"])) 
@@ -28,6 +32,10 @@
 
 
 		else{
+			if(!$match1||!$match2){
+		echo "information format wrong";
+
+	}else{
 			$query="INSERT INTO user (Correo,Contrasena,Nombre,Apellido,Direccion,Ciudad,Estado, Postal,type,Tipo) VALUES ('{$_POST["correo"]}','$shaname2','{$_POST["nombre"]}','{$_POST["apellido"]}','{$_POST["direccion"]}','{$_POST["ciudad"]}','{$_POST["estado"]}','{$_POST["postal"]}','2','{$_POST["Tipo"]}')";
 		
 		if (!mysqli_query($dbc,$query)){
@@ -40,7 +48,7 @@
 		
 		
 	mysqli_close($dbc);
-		
+		}
 		
 	}
 	
