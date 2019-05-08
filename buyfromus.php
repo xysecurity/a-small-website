@@ -36,7 +36,7 @@ while($row=$data->fetch_assoc()){
     <li><a href="Registrate.html">Registrate</a></li>
     <li><a href="Contact.html">Contacto</a></li>
     <li><a href="Login.html">Iniciar Sesion</a></li>
-    <li><a class="active" href="buyfromus.html">Comprar Boletos</a></li>
+    <li><a class="active" href="buyfromus.php">Comprar Boletos</a></li>
   </ul>
 	</div>
 

@@ -18,7 +18,7 @@
 				
 				var b=data;
 				if(b==1){
-					alert("you should input all required information");
+					alert("you should input all required information ");
 					
 				}
 				else if(b==2){
